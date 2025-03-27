@@ -1,0 +1,2 @@
+#!/bin/bash
+. ${XBPS_SRCPKGDIR}/gtk4-layer-shell/template
