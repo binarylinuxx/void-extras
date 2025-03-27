@@ -1,0 +1,19 @@
+# Template for wlshot
+
+pkgname=wlshot
+version=0.0.5
+homepage="https://github.com/binarylinuxx/wlshot"
+license="GPL-3.0"
+maintainer="Binary Linux <nrw58886@gmail.com>"
+arch="x86_64"
+distfiles="https://github.com/binarylinuxx/wlshot/archive/refs/tags/wlshot-v0.0.5fr-alpha.tar.gz"
+checksum="69e074a4099788ad8bc36248ef5f0d3a0a6ebbe6f5b3dad22ef996a3dffde974"
+depends="grim slurp wl-clipboard"
+makedepends="grim slurp wl-clipboard"
+short_desc="A simple screenshot utility for wlroots-based compositors"
+revision=1
+
+do_install() {
+  install -Dm755 ${wrksrc}/shot ${DESTDIR}/usr/bin/shot
+  install -Dm644 LICENSE ${DESTDIR}/usr/share/licenses/${pkgname}/LICENSE
+}
